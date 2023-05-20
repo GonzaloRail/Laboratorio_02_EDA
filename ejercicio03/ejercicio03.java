@@ -13,12 +13,7 @@ class ejercicio03 {
         } else {
             trianguloRecursivo(base - 1);  // Llamada recursiva para imprimir la parte superior del triángulo
 
-            // Imprimir una línea de asteriscos correspondiente a la base actual
-            for (int i = 0; i < base; i++) {
-                System.out.print("*");
-            }
-
-            System.out.println();  // Imprimir un salto de línea después de cada línea de asteriscos
+            System.out.println("*".repeat(base));  // Imprimir una línea de asteriscos correspondiente a la base actual
         }
     }
 }
