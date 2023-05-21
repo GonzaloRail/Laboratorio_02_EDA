@@ -22,6 +22,12 @@ public class Ejercicio4_2{
 	System.out.println("La lista esta vacia?: "+mylist.isEmpty());
 	System.out.println("La lista contiene a nodo2?"+mylist.contains(nodoNum2));
 	System.out.println("La lista contiene a nodo4?"+mylist.contains("nodo4"));
+	System.out.println("Elimina el nodo2 e imprimelo");
+	mylist.remove(nodoNum2);
+	System.out.println(mylist);
+	mylist.push(nodoNum2);
+	System.out.println(mylist);
+
     }
 }
 
@@ -73,7 +79,13 @@ public class List <T>{
 			}
 		}
 		return valor;
-
+	}
+	public void remove(Object a){
+		for (int i=0;i<list.size();i++){
+			if(list.get(i)==a){
+				list.remove(i);
+			}
+		}
 	}
 	
 }
