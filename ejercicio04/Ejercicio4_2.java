@@ -19,6 +19,7 @@ public class Ejercicio4_2{
 	System.out.println(mylist);
 
 	System.out.println("Metodo para hallar numero de Elementos: "+ mylist.size());
+	System.out.println("La lista esta vacia?: "+mylist.isEmpty());
     }
 }
 
@@ -54,6 +55,12 @@ public class List <T>{
 	}
 	public int size(){
 		return list.size();
+	}
+	public boolean isEmpty(){
+		if(list.size()==0)
+			return true;
+		else
+			return false;
 	}
 
 	
