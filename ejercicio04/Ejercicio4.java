@@ -113,8 +113,8 @@ public class List <T>{
 	public Object get(int i){
 		return list.get(i);
 	}
-	public Object set(int i,Node<T> a){
-		return list.set(i,a);
+	public void set(int i,Node<T> a){
+		list.set(i,a);
 	}
 	
 }
