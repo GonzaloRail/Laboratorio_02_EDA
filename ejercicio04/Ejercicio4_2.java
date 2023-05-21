@@ -39,6 +39,9 @@ public class Ejercicio4_2{
 	System.out.println("Ahora cambia el 2 elmento por el nodo4: ");
 	mylist.set(1,nodo4);
 	System.out.println(mylist);
+	System.out.println("Elimina el nodo 3 e imprimelo");
+	mylist.remove(2);
+	System.out.println(mylist);
     }
 }
 
@@ -97,6 +100,12 @@ public class List <T>{
 				list.remove(i);
 			}
 		}
+	}
+	public void remove(int a){
+		if(a<list.size())
+			list.remove(a);
+		else
+			System.out.println("NO existe el elemnto en la posicion "+a);
 	}
 	public void clear(){
 		list.clear();
