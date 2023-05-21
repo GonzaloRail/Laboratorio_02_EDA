@@ -12,6 +12,7 @@ public class Ejercicio4_2{
 	Node <Integer> nodo3= new Node<>(3);
 	Node <Integer> nodoNum2 = new Node<>(2,nodo3);
 	Node <Integer> nodoNum = new Node<>(1, nodoNum2);
+	Node <Integer> nodo4 = new Node<>(4,nodo3);
 	List<Integer> mylist = new List<Integer>(nodoNum);
 	mylist.push(nodoNum2);
 
@@ -31,7 +32,13 @@ public class Ejercicio4_2{
 	System.out.println("Ahora elimina la lista");
 	mylist.clear();
 	System.out.println("La lista esta vacia?: "+mylist.isEmpty());
-
+	mylist.push(nodoNum);
+	mylist.push(nodoNum2);
+	mylist.push(nodo3);
+	System.out.println("Recupera la list y imprime el 3er objeto: "+mylist.get(2));
+	System.out.println("Ahora cambia el 2 elmento por el nodo4: ");
+	mylist.set(1,nodo4);
+	System.out.println(mylist);
     }
 }
 
@@ -93,6 +100,12 @@ public class List <T>{
 	}
 	public void clear(){
 		list.clear();
+	}
+	public Object get(int i){
+		return list.get(i);
+	}
+	public Object set(int i,Node<T> a){
+		return list.set(i,a);
 	}
 	
 }
