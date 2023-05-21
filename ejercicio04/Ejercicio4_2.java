@@ -20,6 +20,8 @@ public class Ejercicio4_2{
 
 	System.out.println("Metodo para hallar numero de Elementos: "+ mylist.size());
 	System.out.println("La lista esta vacia?: "+mylist.isEmpty());
+	System.out.println("La lista contiene a nodo2?"+mylist.contains(nodoNum2));
+	System.out.println("La lista contiene a nodo4?"+mylist.contains("nodo4"));
     }
 }
 
@@ -62,7 +64,17 @@ public class List <T>{
 		else
 			return false;
 	}
+	public boolean contains(Object a){
+		boolean valor=false;
+		int i=0;
+		for (i=0;i<list.size();i++){
+			if(list.get(i)==a){
+				valor=true;
+			}
+		}
+		return valor;
 
+	}
 	
 }
 
